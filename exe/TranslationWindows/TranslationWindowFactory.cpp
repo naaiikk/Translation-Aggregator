@@ -11,7 +11,6 @@
 #include "HttpWindows/ExciteWindow.h"
 //#include "HttpWindows/FreeTranslationWindow.h"
 #include "HttpWindows/GoogleWindow.h"
-#include "HttpWindows/DeepLWindow.h"
 #include "HttpWindows/HonyakuWindow.h"
 #include "HttpWindows/InfoseekWindow.h"
 #include "HttpWindows/LECOnlineWindow.h"
@@ -27,7 +26,7 @@
 int MakeTranslationWindows(TranslationWindow** &windows, TranslationWindow* &srcWindow)
 {
 	int numWindows = 0;
-	windows = (TranslationWindow**) malloc(sizeof(TranslationWindow*) * 18);
+	windows = (TranslationWindow**) malloc(sizeof(TranslationWindow*) * 17);
 	windows[numWindows++] = srcWindow = new UntranslatedWindow();
 	windows[numWindows++] = new AtlasWindow();
 	windows[numWindows++] = new LECWindow();
@@ -36,7 +35,6 @@ int MakeTranslationWindows(TranslationWindow** &windows, TranslationWindow* &src
 	windows[numWindows++] = new LECOnlineWindow();
 	windows[numWindows++] = new GoogleWindow();
 	windows[numWindows++] = new BingWindow();
-	windows[numWindows++] = new DeepLWindow();
 	windows[numWindows++] = new YandexWindow();
 //	windows[numWindows++] = new HonyakuWindow(); // Service shutdown
 	windows[numWindows++] = new SysTranWindow();
