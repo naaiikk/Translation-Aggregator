@@ -77,6 +77,7 @@ void TranslationWindow::SetFont()
 		if (config.font.italic) format.dwEffects |= CFE_ITALIC;
 		if (config.font.underline) format.dwEffects |= CFE_UNDERLINE;
 		if (config.font.strikeout) format.dwEffects |= CFE_STRIKEOUT;
+		// TEXT COLOR?
 		if (config.font.color)
 			format.crTextColor = RGB(100, 149, 237);
 		else
