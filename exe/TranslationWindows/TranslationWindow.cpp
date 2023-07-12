@@ -90,7 +90,7 @@ void TranslationWindow::SetFont()
 		SendMessage(hWndEdit, EM_SETCHARFORMAT, SCF_ALL|SCF_DEFAULT, (LPARAM) &format);
 
 		// BACKGROUND COLOR
-		SendMessage(hWndEdit, EM_SETBKGNDCOLOR, 0, RGB(32, 32, 32));
+		//SendMessage(hWndEdit, EM_SETBKGNDCOLOR, 0, RGB(32, 32, 32));
 	}
 }
 
@@ -614,6 +614,7 @@ LRESULT CALLBACK TranslationWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
 	{
 		CREATESTRUCT *cs = (CREATESTRUCT *)lParam;
 		SetWindowLongPtr(hWnd, GWLP_USERDATA, (ULONG_PTR)cs->lpCreateParams);
+		SendMessage(window->hWndEdit, EM_SETBKGNDCOLOR, 0, RGB(32, 32, 32));
 	}
 	return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
